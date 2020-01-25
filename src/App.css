@@ -284,17 +284,19 @@ This is not the styling for Q1 of 3 progress text.*/
 	display: block;
 }
 
-h1 {
+h1, h2 {
 	margin-left: 15px;
 	margin-right: 15px;
 }
 
 @media screen and (max-width: 600px) {
-	h1 {
+	h1, h2 {
 		margin-left: 10px;
 		margin-right: 10px;
 	}
 }
+
+
 
 /* a:hover {
 	color: #000;
