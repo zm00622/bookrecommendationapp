@@ -11,8 +11,6 @@ function App() {
   const [showResults, setShowResults] = useState(false);
   const [error, setError] = useState('');
 
-// Testing commit from Github Desktop
-
   const questions = [
         {
             id: 1,
@@ -28,7 +26,10 @@ function App() {
             incorrect_answer2: '2',
             incorrect_answer3: '3',
 
-            suggested_reading: 'You seem to be unhappy on a frequent basis. Perhaps you should read "The Happiness Hypothesis by Jonathan Haidt".',
+            suggested_reading: 'You seem to be unhappy on a frequent basis. Perhaps you should read ',
+            special_link: "https://www.amazon.com/Happiness-Hypothesis-Finding-Modern-Ancient/dp/0465028020",
+            // special_link: is passed into the <a href=""></a>
+            special_text: '"The Happiness Hypothesis by Jonathan Haidt".'
         },
         {
             id: 2,
@@ -45,6 +46,8 @@ function App() {
             incorrect_answer3: '3',
 
             suggested_reading: 'You may be struggling with your sense of purpose. Perhaps you should read "Mans Search for Meaning by Victor Frankl".',
+            special_link: "https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X",
+            special_text: '"Mans Search for Meaning".'
         },
         {
             id: 3,
@@ -61,6 +64,8 @@ function App() {
             incorrect_answer3: '3',
 
             suggested_reading: 'You may need some better habits. Perhaps you should read "Mini Habits: Smaller Habits, Bigger Results by Stephen Guise".',
+            special_link: "https://www.amazon.com/Mini-Habits-Smaller-Bigger-Results/dp/1494882272",
+            special_text: '"Mini Habits".'
         },
     ];
 
@@ -93,13 +98,34 @@ const renderResultsData = () => {
     );
 
     if (question.incorrect_answer1 === answer.answer) {
-      const resultElement = <div className="ResultElement" key={question.id} >  {question.suggested_reading} </div>;
+      const resultElement = <div className="ResultElement" key={question.id} >
+      {question.suggested_reading}
+      <a href={question.special_link} target="_blank">
+        {question.special_text}
+      </a>
+      </div>;
       return resultElement
     } else if (question.incorrect_answer2 === answer.answer) {
-      const resultElement = <div className="ResultElement" key={question.id} >  {question.suggested_reading} </div>;
+      const resultElement =
+        // <div className="ResultElement" key={question.id} >
+        //   {question.suggested_reading}
+        //   <a href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/080701429X" target="_blank">
+        //     Mans Search for Meaning
+        //   </a>
+        // </div>;
+        <div className="ResultElement" key={question.id} > {question.suggested_reading}
+          <a href={question.special_link} target="_blank">
+            {question.special_text}
+          </a>
+        </div>;
       return resultElement
     } else if (question.incorrect_answer3 === answer.answer) {
-      const resultElement = <div className="ResultElement" key={question.id} >  {question.suggested_reading} </div>;
+      const resultElement =
+        <div className="ResultElement" key={question.id} > {question.suggested_reading}
+          <a href={question.special_link} target="_blank">
+            {question.special_text}
+          </a>
+        </div>;
       return resultElement
     }
   });

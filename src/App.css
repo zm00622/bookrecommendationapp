@@ -278,9 +278,9 @@ This is not the styling for Q1 of 3 progress text.*/
 	}
 }
 
-a {
+ a {
 	color: inherit;
-	text-decoration: inherit;
+	/* text-decoration: inherit; */
 	display: block;
 }
 
