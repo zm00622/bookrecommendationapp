@@ -1,0 +1,313 @@
+.container {
+	padding-top: 10%;
+	padding-bottom: 100%;
+	width: 100%;
+	height: absolute; /*Absolute works best thus far*/
+  text-align: center;
+	color: #fff;
+	background: linear-gradient(-45deg, #2ECC71, #17A589, #23a6d5, #23d5ab) no-repeat center center fixed;
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+}
+
+@media screen and (max-height: 400px) {
+	.container {
+		padding-top: 10%;
+		padding-bottom: 100%;
+		width: 100%;
+		height: absolute; /*Absolute works best thus far*/
+	  text-align: center;
+		color: #fff;
+		background: linear-gradient(-45deg, #2ECC71, #17A589, #23a6d5, #23d5ab) no-repeat center center fixed;
+		background-size: 400% 400%;
+		animation: gradientBG 15s ease infinite;
+	}
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.answer {
+    border: 1px solid #fff;
+		background-color: #fff;
+    border-radius: 4px;
+    padding: 5px 10px 5px 45px;
+    width: 70%;
+    text-align: left;
+    font-family: "Assistant";
+    margin-top: 10px;
+    position: relative;
+    font-size: 22px;
+    transition: ease-in-out, width 0.35s ease-in-out;
+}
+
+.answer.selected {
+    color: #4f4c4c;
+    background-color: #c8ffbb;
+}
+
+.answer:hover {
+    color: #4f4c4c;
+    background-color: #c8ffbb;
+}
+
+.answer:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 600px) {
+	.answer {
+		border: 1px solid #fff;
+		background-color: #fff;
+		border-radius: 4px;
+		padding: 5px 10px 5px 45px;
+		width: 80%;
+		text-align: left;
+		font-family: "Assistant";
+		margin-top: 10px;
+		position: relative;
+		font-size: 18px;
+		transition: ease-in-out, width 0.35s ease-in-out;
+	}
+}
+
+/*.results span.correct {
+    color: #fff;
+    font-family: "Assistant", sans-serif;
+    font-size: 18px;
+}*/
+
+.results span.failed {
+    color: #fff;
+    font-family: "Assistant", sans-serif;
+    font-size: 20px;
+}
+
+.ResultElement {
+	background-color: #fdfdfd;
+	color: #3b3b41;
+	font-family: "Assistant", sans-serif;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 30px;
+	margin-left: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-style: solid;
+	border-color: #ceced0;
+	border-radius: 10px;
+}
+
+.ResultElement:hover {
+	background-color: #fdfdfd;
+	color: #3b3b41;
+	font-family: "Assistant", sans-serif;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 30px;
+	margin-left: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-style: solid;
+	border-color: #fff;
+	border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+.ResultElement {
+	background-color: #fdfdfd;
+	color: #3b3b41;
+  font-family: "Assistant", sans-serif;
+	text-align: center;
+  font-size: 18px;
+	margin-right: 30px;
+	margin-left: 30px;
+	padding-top: 18px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-style: solid;
+	border-color: #ceced0;
+	border-radius: 10px;
+}
+}
+
+@media screen and (max-width: 600px) {
+	.ResultElement:hover {
+		background-color: #fdfdfd;
+		color: #3b3b41;
+	  font-family: "Assistant", sans-serif;
+		text-align: center;
+	  font-size: 18px;
+		margin-right: 30px;
+		margin-left: 30px;
+		padding-top: 18px;
+		padding-bottom: 15px;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-style: solid;
+		border-color: #ceced0;
+		border-radius: 10px;
+	}
+}
+
+.error {
+    color: #f27c7c;
+    background-color: #000;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    border-radius: 4px;
+    font-family: "Assistant", sans-serif;
+}
+
+.letter {
+    color: #4f4c4c;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    height: 28px;
+    top: 0;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.btn {
+    color: #4f4c4c;
+    background-color: #f4f4f4;
+    padding: 10px 50px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #4f4c4c;
+    background-color: #ffc107;
+    font-weight: bold;
+    font-family: "Assistant", sans-serif;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+	.btn-primary {
+			margin-top: 15px;
+			margin-bottom: 100%;
+			padding-top: 6px;
+			padding-bottom: 6px;
+	    color: #4f4c4c;
+	    background-color: #ffc107;
+	    font-weight: bold;
+	    font-family: "Assistant", sans-serif;
+	    border-radius: 8px;
+	}
+}
+
+/*QuestionHeader styling is for the question itself.
+This is not the styling for Q1 of 3 progress text.*/
+@media screen and (min-width: 601px) {
+	.QuestionHeader {
+	  font-family: "Assistant", sans-serif;
+	  margin-bottom: 3%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.QuestionHeader {
+		font-family: "Assistant", sans-serif;
+		font-size: 24px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-bottom: 3%;
+	}
+}
+
+.icon.home {
+	opacity: 100%;
+	line-height: 1;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+.icon.home:hover {
+	opacity: 50%;
+	line-height: 1;
+  vertical-align: middle;
+  font-size: 1.5em;
+}
+
+@media screen and (max-width: 600px) {
+	.icon.home {
+		opacity: 100%;
+		line-height: .2;
+	  vertical-align: middle;
+	  font-size: 1.5em;
+	}
+}
+
+/*This code defaults the styling for the IconLink so that it does not change blue or have an underline*/
+.IconLink {
+	  color: inherit; /* blue colors for links too */
+	  text-decoration: inherit; /* no underline */
+}
+
+@media screen and (max-width: 600px) {
+	.Progress {
+		margin-top: 3px;
+		margin-bottom: 1px;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+	display: block;
+}
+
+h1 {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+/* a:hover {
+	color: #000;
+} */
+
+/* .HomeButton {
+	margin-top: 0px;
+	padding-top: 0px;
+	opacity: 0%;
+}
+
+ .HomeButton:hover {
+	margin-top: 0px;
+	padding-top: 0px;
+	opacity: 50%;
+} */
